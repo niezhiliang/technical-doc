@@ -26,5 +26,22 @@
 
 ### 2.首先将项目设置为自动加载
 
+- File/Other settings/Default Settings/
+
+![自动加载](https://github.com/niezhiliang/technical-doc/blob/master/imgs/1.png)
+
+
+
+- 快捷键 Ctrl + Shift +Alt + /  (1.Register) 将compiler.automake.allow.when.app.running 勾上
+
+![自动加载](https://github.com/niezhiliang/technical-doc/blob/master/imgs/2.png)
+
+
+### 3.重启Idea 修改个文件  看看是不是会自动重启啦😁
+
+
+
+
+
 
 
