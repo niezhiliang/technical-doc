@@ -17,7 +17,13 @@
 
  ### 3.pringboot 2.x代码里面对tomcat配置进行修改      
  
-            @Bean
+    @Value("${server.custom.httpPort}")
+    private Integer httpPort;
+    
+    @Value("${server.port}")
+    private Integer httpsPort;
+    
+    @Bean
     public TomcatServletWebServerFactory servletContainer() { //springboot2 新变化
 
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
