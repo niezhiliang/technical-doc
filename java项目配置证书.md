@@ -14,9 +14,40 @@
               key-store-type: JKS
               key-alias: #证书别名
               
+
+ ### 3.pringboot 2.x代码里面对tomcat配置进行修改      
+ 
+            @Bean
+    public TomcatServletWebServerFactory servletContainer() { //springboot2 新变化
+
+        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+
+            @Override
+            protected void postProcessContext(Context context) {
+
+                SecurityConstraint securityConstraint = new SecurityConstraint();
+                securityConstraint.setUserConstraint("CONFIDENTIAL");
+                SecurityCollection collection = new SecurityCollection();
+                collection.addPattern("/*");
+                securityConstraint.addCollection(collection);
+                context.addConstraint(securityConstraint);
+            }
+        };
+        tomcat.addAdditionalTomcatConnectors(initiateHttpConnector());
+        return tomcat;
+    }
+
+    private Connector initiateHttpConnector() {
+        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+        connector.setScheme("http");
+        connector.setPort(httpPort);
+        connector.setSecure(false);
+        connector.setRedirectPort(httpsPort);
+        return connector;
+    }
               
-                                                    
-### 3.代码里面对tomcat配置进行修改
+
+### 3.pringboot 1.5x代码里面对tomcat配置进行修改
 
 
         @Configuration
