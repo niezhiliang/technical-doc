@@ -56,7 +56,7 @@ docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 
 ```
 	
-	我们会看到控制台打印这条语句，大概意思就是一个是（私有仓库）http协议一个是（本地）https协议，两个协议不一致，导致推送失败。我们将本地也设置为http就能推成功
+`我们会看到控制台打印这条语句，大概意思就是一个是（私有仓库）http协议一个是（本地）https协议，两个协议不一致，导致推送失败。我们将本地也设置为http就能推成功`
 
 ![异常](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register1.png)
 
