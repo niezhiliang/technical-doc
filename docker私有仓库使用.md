@@ -31,30 +31,30 @@ services:
 
 ### 3. 本地上传镜像到私有仓库
 
-	- 1.下载代码到本地
+- 1.下载代码到本地
 
-	```
-		git clone https://github.com/niezhiliang/springbootwebsocket
-	```
+```
+git clone https://github.com/niezhiliang/springbootwebsocket
+```
 
-	- 2.进入项目根目录，将源代码生成镜像
+- 2.进入项目根目录，将源代码生成镜像
 
-	```
-		./buile_image.sh
-	```
+```
+	./buile_image.sh
+```
 
-	- 3. 打一个tag为推到私有仓库做准备
+- 3. 打一个tag为推到私有仓库做准备
 
-	```
-		docker tag suyu/springbootwebsocket:1.0 www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0
+```
+docker tag suyu/springbootwebsocket:1.0 www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0
 
-		//查看镜像
-		docker images 
+//查看镜像
+docker images 
 
-		//将镜像推动到私有仓库
-		docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
+//将镜像推动到私有仓库
+docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 
-	```
+```
 	
 	我们会看到控制台打印这条语句，大概意思就是一个是（私有仓库）http协议一个是（本地）https协议，两个协议不一致，导致推送失败。我们将本地也设置为http就能推成功
 
@@ -66,12 +66,12 @@ services:
 ![设置](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register2.png)
 
 
-	```
-		//Mac重启docker,其他系统自己想办法（重启有点慢得等会）
-		killall Docker && open /Applications/Docker.app
-		
-		docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
-	```
+```
+	//Mac重启docker,其他系统自己想办法（重启有点慢得等会）
+	killall Docker && open /Applications/Docker.app
+
+	docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
+```
 	
 ![成功](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register3.png)
 
