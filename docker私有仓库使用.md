@@ -7,7 +7,7 @@
 #### 1.下载docker私有仓库镜像
 
 ```
-	docker pull registry:2.6
+docker pull registry:2.6
 ```
 
 #### 2.编写docker-compose.yml将镜像跑起来
