@@ -86,9 +86,9 @@ docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
  ```
  docker pull www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0
  ```
- - 运行容器看看项目是否正常启动(可以看到项目可以正常启动，但是访问不到 因为没有端口互通)
+ - 运行容器看看项目是否正常启动(可以看到项目可以正常启动，我们试着访问一下)
  ```
- docker run www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0
+ docker run www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0 -d -p 8086:8086 --restart always --name websocket
  ```
 
 
