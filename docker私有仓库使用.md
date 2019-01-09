@@ -90,5 +90,6 @@ docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
  ```
  docker run www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0 
  ```
+ ![成功](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register4.png)
 
 
