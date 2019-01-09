@@ -77,5 +77,14 @@ docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 ![成功](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register3.png)
 
 
+ #### 4.测试是否推送成功
+ - 删除构建之前的镜像	
+ ```
+ docker rmi [镜像id]
+ ```
+ - 从私有仓库下载镜像
+ ```
+ docker pull www.niezhiliang.com:5000/suyu/springbootwebsocker:1.0
+ ```
 
 
