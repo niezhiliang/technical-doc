@@ -67,10 +67,10 @@ docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 
 
 ```
-	//Mac重启docker,其他系统自己想办法（重启有点慢得等会）
-	killall Docker && open /Applications/Docker.app
+//Mac重启docker,其他系统自己想办法（重启有点慢得等会）
+killall Docker && open /Applications/Docker.app
 
-	docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
+docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 ```
 	
 ![成功](https://github.com/niezhiliang/technical-doc/blob/master/imgs/register3.png)
