@@ -1,6 +1,8 @@
 ### Docker私有仓库搭建及使用
 
-准备：一台服务器（www.niezhiliang.com）,本地机器（我的是Mac）上传镜像源代码：https://github.com/niezhiliang/springbootwebsocket
+准备：一台服务器（www.niezhiliang.com）,本地机器（我的是Mac）
+
+上传镜像源代码：https://github.com/niezhiliang/springbootwebsocket
 
 #### 1.下载docker私有仓库镜像
 
@@ -67,9 +69,7 @@ services:
 	```
 		//Mac重启docker,其他系统自己想办法（重启有点慢得等会）
 		killall Docker && open /Applications/Docker.app
-	```
-
-	```
+		
 		docker push www.niezhiliang.com:5000/suyu/springbootwebsocker
 	```
 	
